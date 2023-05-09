@@ -2,7 +2,9 @@
 <h1>Damilareadesina - Danny's Diner </h1>
 
 <h2>Description</h2>
-Analysis on inflation is a descriptive analysis that explain how countries have performed in the span of 22years. Inflation is a power economic tool that government uses to adjust their policies to the development of their countries. Inflation is the general increase in prices and fall in the purchasing vlue of money.This project tries to compare how countries have performed in recent year with reference to Nigeria
+Danny seriously loves Japanese food so in the beginning of 2021, he decides to embark upon a risky venture and opens up a cute little restaurant that sells his 3 favourite foods: sushi, curry and ramen.
+
+Danny’s Diner is in need of your assistance to help the restaurant stay afloat - the restaurant has captured some very basic data from their few months of operation but have no idea how to use their data to help them run the business
 <br />
 
 
