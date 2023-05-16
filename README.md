@@ -19,7 +19,7 @@ Danny wants to use the data to answer a few simple questions about his customers
 
 <h2>Environments Used </h2>
 
-- <b>MY SQL</b>
+- <b>MY SQL WORK BENCH </b>
 
 <h2>Process walk-through:</h2>
 
