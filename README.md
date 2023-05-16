@@ -32,7 +32,7 @@ FROM sales
 LEFT JOIN menu 
 	ON menu.product_id = sales.product_id
     GROUP BY sales.customer_id; <br />
-	<img src="https://user-images.githubusercontent.com/126564128/230754211-675ceba1-c056-4d02-bc27-cdda8d18037a.JPG"/>
+	<img src="https://github.com/Damilareadesina/Dannys-Diner/assets/126564128/7b6726a3-3e71-4091-87a3-4cd3da8b70d4.jpg"/>
 <br />
 <br />
 
@@ -43,7 +43,7 @@ SELECT sales.customer_id,
     COUNT(DISTINCT sales.order_date) as Days_visiting
     FROM sales
     GROUP BY customer_id; <br />
-<img src="https://user-images.githubusercontent.com/126564128/230757786-b5ed01b1-1de3-4624-b3cf-e4810ee47fd1.JPG"/>
+<img src="https://github.com/Damilareadesina/Dannys-Diner/assets/126564128/6eb453d9-6e9c-48bc-8633-e592066e2db1.JPG"/>
   <p align="center"> 
 <br />
 <br />  
@@ -55,7 +55,7 @@ SELECT sales.customer_id,menu.product_name
    LEFT JOIN menu
    ON menu.product_id = sales.product_id
     GROUP BY customer_id; <br />
-<img src="https://user-images.githubusercontent.com/126564128/230757786-b5ed01b1-1de3-4624-b3cf-e4810ee47fd1.JPG"/>
+<img src="https://github.com/Damilareadesina/Dannys-Diner/assets/126564128/940e5e48-b356-4730-8005-71c5e5bbe561.JPG"/>
   <p align="center"> 
  <br />
 <br />
@@ -69,7 +69,7 @@ ON menu.product_id = sales.product_id
 GROUP BY menu.product_name
 ORDER BY times_purchased DESC
 LIMIT 1;<br />
-<img src="https://user-images.githubusercontent.com/126564128/230757786-b5ed01b1-1de3-4624-b3cf-e4810ee47fd1.JPG"/>
+<img src="https://github.com/Damilareadesina/Dannys-Diner/assets/126564128/ea943337-56e6-4d13-987a-4a64967d8d9c.JPG"/>
   <p align="center"> 
  <br />
 <br />
@@ -84,7 +84,7 @@ JOIN menu
 on sales.product_id = menu.product_id
 GROUP BY customer_id, product_name
 ORDER BY (time_purchased ) DESC;<br />
- <img src="https://user-images.githubusercontent.com/126564128/230757786-b5ed01b1-1de3-4624-b3cf-e4810ee47fd1.JPG"/>
+ <img src="https://github.com/Damilareadesina/Dannys-Diner/assets/126564128/1f4eab7b-3672-483b-8a93-8dcdfb78dd8a.JPG"/>
   <p align="center"> 
 <br />
 <br />
@@ -101,7 +101,7 @@ WHERE order_date >= join_date
 GROUP BY members.customer_id
 ORDER BY order_date AND join_date
 LIMIT 2;<br />
-<img src="https://user-images.githubusercontent.com/126564128/230757786-b5ed01b1-1de3-4624-b3cf-e4810ee47fd1.JPG"/>
+<img src="https://github.com/Damilareadesina/Dannys-Diner/assets/126564128/635e67f9-e9cd-4679-be35-6ee89d9c4b47.JPG"/>
   <p align="center"> 
 <br />
 <br />
@@ -116,7 +116,7 @@ WHERE order_date < join_date
 GROUP BY members.customer_id,product_id
 ORDER BY order_date DESC
 LIMIT 3;<br />
-<img src="https://user-images.githubusercontent.com/126564128/230757786-b5ed01b1-1de3-4624-b3cf-e4810ee47fd1.JPG"/>
+<img src="https://github.com/Damilareadesina/Dannys-Diner/assets/126564128/e29f9af8-7252-46d2-8c59-f8f6150ec870.JPG"/>
   <p align="center"> 
 <br />
 <br />
@@ -134,7 +134,7 @@ GROUP BY members.customer_id
 ORDER BY order_date DESC
 LIMIT 4;<br />
 
-<img src="https://user-images.githubusercontent.com/126564128/230757786-b5ed01b1-1de3-4624-b3cf-e4810ee47fd1.JPG"/>
+<img src="https://github.com/Damilareadesina/Dannys-Diner/assets/126564128/e82d253a-1ec9-4048-9cf4-5b5fe60fc3a4.JPG"/>
   <p align="center"> 
 <br />
 <br />
@@ -153,7 +153,7 @@ JOIN menu
 ON sales.product_id = menu.product_id
 
  GROUP BY customer_id;
-<img src="https://user-images.githubusercontent.com/126564128/230757786-b5ed01b1-1de3-4624-b3cf-e4810ee47fd1.JPG"/>
+<img src="https://github.com/Damilareadesina/Dannys-Diner/assets/126564128/53eea35e-1989-4e17-b3dc-e0ae98f4cde3.JPG"/>
   <p align="center">
 <br />
 <br />
@@ -181,7 +181,7 @@ JOIN members
 ON sales.customer_id = members.customer_id
 
 GROUP BY customer_id ;
-<img src="https://user-images.githubusercontent.com/126564128/230757786-b5ed01b1-1de3-4624-b3cf-e4810ee47fd1.JPG"/>
+<img src="https://github.com/Damilareadesina/Dannys-Diner/assets/126564128/3a55d93d-b1da-4375-89e2-285807c96157.JPG"/>
   <p align="center">
 
 <br />
