@@ -36,8 +36,29 @@ LEFT JOIN menu
 <br />
 <br />
 
-  
 <p align="center">
+ 2. How many days has each customer visited the restau
+<p align="center">
+SELECT sales.customer_id, 
+    COUNT(DISTINCT sales.order_date) as Days_visiting
+    FROM sales
+    GROUP BY customer_id; <br />
+<img src="https://user-images.githubusercontent.com/126564128/230757786-b5ed01b1-1de3-4624-b3cf-e4810ee47fd1.JPG"/>
+  <p align="center"> 
+<br />
+<br />  
+<p align="center"> 
+3. What was the first item from the menu purchased by each customer?
+   
+SELECT sales.customer_id,menu.product_name
+   FROM sales
+   LEFT JOIN menu
+   ON menu.product_id = sales.product_id
+    GROUP BY customer_id; <br />
+<img src="https://user-images.githubusercontent.com/126564128/230757786-b5ed01b1-1de3-4624-b3cf-e4810ee47fd1.JPG"/>
+  <p align="center"> 
+ <br />
+<br />
  4. What is the most purchased item on the menu and how many times was it purchased by all customers?
 
 SELECT product_name AS most_purchase_item, 
