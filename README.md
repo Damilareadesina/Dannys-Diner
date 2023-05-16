@@ -153,6 +153,7 @@ JOIN menu
 ON sales.product_id = menu.product_id
 
  GROUP BY customer_id;
+
 <img src="https://github.com/Damilareadesina/Dannys-Diner/assets/126564128/53eea35e-1989-4e17-b3dc-e0ae98f4cde3.JPG"/>
   <p align="center">
 <br />
