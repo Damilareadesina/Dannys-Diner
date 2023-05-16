@@ -182,6 +182,7 @@ JOIN members
 ON sales.customer_id = members.customer_id
 
 GROUP BY customer_id ;
+
 <img src="https://github.com/Damilareadesina/Dannys-Diner/assets/126564128/3a55d93d-b1da-4375-89e2-285807c96157.JPG"/>
   <p align="center">
 
