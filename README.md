@@ -51,3 +51,103 @@ Pivot tble Analysis:  <br/>
 
  Dashboard Creation: <br/>
 <img src="https://user-images.githubusercontent.com/126564128/230757786-b5ed01b1-1de3-4624-b3cf-e4810ee47fd1.JPG"/>
+  <p align="center"> 
+   1. What is the total amount each customer spent at the restaurant?
+
+SELECT sales.customer_id, SUM(menu.price) AS total_spending
+FROM sales
+LEFT JOIN menu 
+	ON menu.product_id = sales.product_id
+    GROUP BY sales.customer_id;
+   <br />
+
+<br />
+   
+   <p align="center">
+    2. How many days has each customer visited the restaurant?
+    SELECT sales.customer_id, 
+    COUNT(DISTINCT sales.order_date) as Days_visiting
+    FROM sales
+    GROUP BY customer_id;
+    <br />
+    <br />
+    
+    <p align="center">
+     <br />
+     3. What was the first item from the menu purchased by each customer?
+   SELECT sales.customer_id,menu.product_name
+   FROM sales
+   LEFT JOIN menu
+   ON menu.product_id = sales.product_id
+    GROUP BY customer_id;
+     
+   <br />
+   <br />
+<p align="center">
+ 4. What is the most purchased item on the menu and how many times was it purchased by all customers?
+
+SELECT product_name AS most_purchase_item, 
+COUNT(sales.product_id) AS times_purchased
+FROM menu 
+JOIN sales 
+ON menu.product_id = sales.product_id
+GROUP BY menu.product_name
+ORDER BY times_purchased DESC
+LIMIT 1;
+ <br />
+<br />
+
+<p align="center">
+ 5. Which item was the most popular for each customer?
+
+SELECT customer_id, product_name, 
+Count(product_name) AS time_purchased
+FROM sales
+JOIN menu 
+on sales.product_id = menu.product_id
+GROUP BY customer_id, product_name
+ORDER BY (time_purchased ) DESC;
+ 
+<br />
+<br />
+<p align="center">
+ 6. Which item was purchased first by the customer after they became a member?
+
+SELECT DISTINCT members.customer_id, join_date,menu.product_name, order_date
+FROM members
+JOIN sales
+ON sales.customer_id = members.customer_id
+JOIN menu
+ON sales.product_id =menu.product_id
+WHERE order_date >= join_date  
+GROUP BY members.customer_id
+ORDER BY order_date AND join_date
+LIMIT 2;
+<br />
+<br />
+<p align="center">
+ 7. Which item was purchased just before the customer became a member?
+
+SELECT DISTINCT members.customer_id, join_date,product_id, order_date
+FROM members
+JOIN sales
+ON sales.customer_id = members.customer_id
+WHERE order_date < join_date  
+GROUP BY members.customer_id,product_id
+ORDER BY order_date DESC
+LIMIT 3;
+<br />
+<br />
+<p align="center">
+ 8. What is the total items and amount spent for each member before they became a member?
+
+SELECT DISTINCT members.customer_id, join_date, COUNT(sales.customer_id) AS total_items, SUM(price) AS total_amount
+FROM members
+JOIN sales
+ON members.customer_id = sales.customer_id
+JOIN MENU 
+ON sales.product_id = menu.product_id
+WHERE order_date < join_date  
+GROUP BY members.customer_id
+ORDER BY order_date DESC
+LIMIT 4;
